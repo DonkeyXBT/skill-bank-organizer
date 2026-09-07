@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Skill Bank Organizer — RuneLite plugin</title>
+  <meta name="description" content="Scan your OSRS bank into a page per skill. Tools, training supplies, raids kits, and a rebuild order. You move the items yourself." />
+  <style>
+    :root {
+      --bg: #12110f;
+      --surface: #1c1a16;
+      --panel: #23211c;
+      --slot: #2c2923;
+      --line: #3a362e;
+      --ink: #ece7dc;
+      --muted: #9a917f;
+      --gold: #c4a574;
+      --ok: #7ca06e;
+      --miss: #c46a55;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.55 system-ui, sans-serif; }
+    a { color: var(--gold); }
+    header {
+      border-bottom: 1px solid var(--line);
+      background: var(--surface);
+      padding: 2.5rem 1.25rem 2rem;
+    }
+    main, header .wrap, footer .wrap { max-width: 760px; margin: 0 auto; }
+    .kicker { color: var(--gold); letter-spacing: 0.18em; text-transform: uppercase; font-size: 0.72rem; font-weight: 600; }
+    h1 { font-family: Georgia, "Times New Roman", serif; font-size: clamp(2rem, 5vw, 3rem); margin: 0.4rem 0 0.6rem; font-weight: 600; }
+    h2 { font-family: Georgia, "Times New Roman", serif; font-size: 1.45rem; margin: 2.4rem 0 0.7rem; }
+    p.lead { color: var(--muted); max-width: 40rem; }
+    main { padding: 1.5rem 1.25rem 4rem; }
+    .steps { display: grid; gap: 0.75rem; }
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 1rem 1.1rem;
+    }
+    .card strong { color: var(--gold); display: block; font-size: 0.8rem; letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 0.25rem; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+    th, td { text-align: left; padding: 0.55rem 0.4rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+    th { color: var(--muted); font-weight: 600; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; }
+    .warn {
+      border-color: #5a3a32;
+      background: #261814;
+    }
+    ol.install { padding-left: 1.2rem; }
+    ol.install li { margin: 0.45rem 0; }
+    footer { border-top: 1px solid var(--line); padding: 1.5rem 1.25rem 2.5rem; color: var(--muted); font-size: 0.9rem; }
+    code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.88em; background: var(--slot); padding: 0.1em 0.35em; border-radius: 4px; }
+    .row { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1.1rem; }
+    .btn {
+      display: inline-block;
+      background: var(--gold);
+      color: #1a1610;
+      font-weight: 650;
+      text-decoration: none;
+      padding: 0.7rem 1.05rem;
+      border-radius: 10px;
+    }
+    .btn.ghost { background: transparent; color: var(--gold); border: 1px solid var(--line); }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <p class="kicker">RuneLite plugin</p>
+      <h1>Skill Bank Organizer</h1>
+      <p class="lead">Opens your bank, files every stack onto a skill page, and tells you what belongs where. You rebuild the tabs by hand — the plugin never drags items.</p>
+      <div class="row">
+        <a class="btn" href="https://github.com/DonkeyXBT/skill-bank-organizer">View on GitHub</a>
+        <a class="btn ghost" href="https://github.com/DonkeyXBT/skill-bank-organizer/tree/main/plugin/skill-bank-organizer">Plugin source</a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <h2>How it works</h2>
+    <div class="steps">
+      <div class="card"><strong>1. Scan</strong> Open your bank. The plugin reads the live bank container and matches each stack to a skill (and Raids).</div>
+      <div class="card"><strong>2. Check the page</strong> Each skill has tools (best owned vs missing), training methods, what you already have, and a rebuild order.</div>
+      <div class="card"><strong>3. Rebuild by hand</strong> Drag items into the suggested tab following that order. Placeholders keep the section from collapsing.</div>
+    </div>
+
+    <h2>Right-click → Send to page</h2>
+    <p>Right-click a bank item and choose <strong>Send to Woodcutting</strong> (or Raids, Magic, …). That:</p>
+    <ul>
+      <li>Opens the matching skill page in the sidebar</li>
+      <li>Writes a Bank Tag so you can search <code>#woodcutting</code> or <code>#raids</code></li>
+      <li>Highlights those items in the bank while the page is open</li>
+    </ul>
+    <div class="card warn">
+      <strong>It cannot move the item</strong>
+      Jagex does not allow plugins to drag bank slots. Send-to-page tags and shows you the destination. You still pull the stack onto the tab yourself.
+    </div>
+
+    <h2>What each page shows</h2>
+    <ul>
+      <li><strong>Tools</strong> — upgrade path. Marks the best one you already own.</li>
+      <li><strong>Training methods</strong> — supplies for that method, have vs need.</li>
+      <li><strong>In your bank</strong> — matching stacks from the last scan.</li>
+      <li><strong>Rebuild order</strong> — top-to-bottom layout for that tab.</li>
+    </ul>
+    <p>Items can sit on more than one page (maple logs → Woodcutting, Firemaking, Fletching). Leftovers land on <strong>Uncategorized</strong>.</p>
+
+    <h2>Raids kits</h2>
+    <p>There is a dedicated <strong>Raids</strong> page with CoX, ToB and ToA blocks: weapons and armour first, then supplies (overloads, brews, salts, liquid adrenaline).</p>
+
+    <h2>Suggested bank tabs</h2>
+    <table>
+      <thead><tr><th>Tab</th><th>Name</th><th>Skills</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>Melee</td><td>Attack, Strength, Defence</td></tr>
+        <tr><td>2</td><td>Ranged</td><td>Ranged</td></tr>
+        <tr><td>3</td><td>Magic</td><td>Magic, Runecraft</td></tr>
+        <tr><td>4</td><td>Prayer</td><td>Prayer</td></tr>
+        <tr><td>5</td><td>Potions &amp; HP</td><td>Herblore, Hitpoints</td></tr>
+        <tr><td>6</td><td>Crafting</td><td>Crafting, Fletching, Smithing, Construction</td></tr>
+        <tr><td>7</td><td>Food</td><td>Fishing, Cooking</td></tr>
+        <tr><td>8</td><td>Gathering</td><td>Mining, Woodcutting, Firemaking, Hunter, Farming</td></tr>
+        <tr><td>9</td><td>Raids &amp; utility</td><td>Raids, Agility, Thieving, Slayer, leftover</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Install (sideload)</h2>
+    <ol class="install">
+      <li>Install IntelliJ IDEA and JDK 11+.</li>
+      <li>Clone this repo. Open the folder <code>plugin/skill-bank-organizer</code> as a Gradle project.</li>
+      <li>Run the Gradle <code>run</code> task (or <code>SkillBankOrganizerPluginTest</code>).</li>
+      <li>Log in (Jagex account if you use one).</li>
+      <li>Enable <strong>Skill Bank Organizer</strong> in the plugin list.</li>
+      <li>Open your bank. Scan fills the pages. Right-click a stack → Send to page, then drag it yourself.</li>
+    </ol>
+    <p>This follows the official <a href="https://github.com/runelite/example-plugin">example-plugin</a> layout, so it can be submitted to the Plugin Hub later.</p>
+  </main>
+  <footer>
+    <div class="wrap">Not affiliated with Jagex. Information only — no clicking, no moving items.</div>
+  </footer>
+</body>
+</html>
