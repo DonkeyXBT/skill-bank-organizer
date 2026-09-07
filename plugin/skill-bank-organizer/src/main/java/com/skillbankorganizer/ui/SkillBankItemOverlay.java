@@ -13,7 +13,7 @@ public class SkillBankItemOverlay extends WidgetItemOverlay
 
 	private final SkillBankOrganizerPlugin plugin;
 
-	SkillBankItemOverlay(SkillBankOrganizerPlugin plugin)
+	public SkillBankItemOverlay(SkillBankOrganizerPlugin plugin)
 	{
 		this.plugin = plugin;
 		showOnBank();

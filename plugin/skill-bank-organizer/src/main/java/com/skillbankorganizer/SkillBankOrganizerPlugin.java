@@ -18,13 +18,13 @@ import javax.swing.SwingUtilities;
 import lombok.extern.slf4j.Slf4j;
 import net.runelite.api.ChatMessageType;
 import net.runelite.api.Client;
-import net.runelite.api.InventoryID;
 import net.runelite.api.Item;
 import net.runelite.api.ItemComposition;
 import net.runelite.api.ItemContainer;
 import net.runelite.api.MenuAction;
 import net.runelite.api.events.ItemContainerChanged;
 import net.runelite.api.events.MenuEntryAdded;
+import net.runelite.api.gameval.InventoryID;
 import net.runelite.client.callback.ClientThread;
 import net.runelite.client.config.ConfigManager;
 import net.runelite.client.eventbus.Subscribe;
@@ -167,7 +167,7 @@ public class SkillBankOrganizerPlugin extends Plugin
 			{
 				break;
 			}
-			client.createMenuEntry(-1)
+			client.getMenu().createMenuEntry(-1)
 				.setOption("Send to " + skill.name)
 				.setTarget(event.getTarget())
 				.setType(MenuAction.RUNELITE)
