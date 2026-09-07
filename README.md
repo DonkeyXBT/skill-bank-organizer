@@ -33,12 +33,11 @@ Right-click a bank item → **Send to Woodcutting** (or Raids, Magic, …). That
 
 ## Install
 
-1. IntelliJ IDEA + JDK 11+
-2. **File → Open** `plugin/skill-bank-organizer` as a Gradle project
-3. Run the `run` Gradle task
-4. Enable **Skill Bank Organizer**
-5. Open your bank
+1. In RuneLite, click the wrench to open **Configuration**
+2. Open **Plugin Hub** at the bottom of the plugin list
+3. Search for **Skill Bank Organizer** and click **Install**
+4. Enable it, then open your bank
 
-See [plugin/skill-bank-organizer/README.md](plugin/skill-bank-organizer/README.md) for sideload detail.
+The Plugin Hub submission is still in review, so the plugin appears in that list once it is merged.
 
 Not affiliated with Jagex. Information only.

@@ -62,6 +62,46 @@
       border-radius: 10px;
     }
     .btn.ghost { background: transparent; color: var(--gold); border: 1px solid var(--line); }
+    .i {
+      display: inline-block;
+      width: 18px;
+      height: 22px;
+      background-repeat: no-repeat;
+      background-size: 18px 22px;
+      image-rendering: pixelated;
+      vertical-align: middle;
+      flex: none;
+    }
+    .sk { display: inline-flex; align-items: center; gap: 0.3rem; }
+    .sk.none { color: var(--muted); }
+    .chips { display: flex; flex-wrap: wrap; gap: 0.3rem 0.55rem; }
+    .roster { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-top: 1.1rem; }
+    .tablewrap { overflow-x: auto; }
+    .tablewrap table { min-width: 30rem; }
+    .note { color: var(--muted); font-size: 0.9rem; }
+    .i-attack { background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAMAAADzN3VRAAAAFVBMVEUAAAAAAAF1e3x6awlGPC+0qwZVXFpfKXj9AAAAAXRSTlMAQObYZgAAAE5JREFUeNrd0jEOgAAMw8C6bvn/k5EYUZAYmMh6g5dUHECG7uYJmido/gDHdzB3ACBB4e4aoFB3DQ3gohRndCXBjEoESOIMWVYogNfXOgGvAwGJkZCw2wAAAABJRU5ErkJggg==); }
+    .i-strength { background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAUCAMAAACzvE1FAAAADFBMVEUAAADBpHYAAAFGPC8vY/5LAAAAAXRSTlMAQObYZgAAAFNJREFUeNqtjkkKxEAMxCzp/38emGzdOcfgg+Qq8PxHnXUU1I0JvBgiIJd7QHgGgCLIk4OOdQTqdt6NOnhGnlLOyziXqQCdNbL9CvUW4CYA5xvxA/dnAV4NB3bkAAAAAElFTkSuQmCC); }
+    .i-defence { background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAATCAYAAAB2pebxAAAAVUlEQVR42mNgYGD8TzEGEaExURi4tLoGA0+aNRUdww0hbAACk2wIspNHqiGkROvgMWQ0igkZAgGM5BgCkUMFjCRlQEwDMA0i0wBMg8g1AGEQFozTAACI+xqkhRvFKgAAAABJRU5ErkJggg==); }
+    .i-ranged { background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAXCAMAAADX9CSSAAAAElBMVEUAAAAAAAF6PQl1e3wJbAI1Lxvn8OCVAAAAAXRSTlMAQObYZgAAAIJJREFUeNqNj0GOAyAQw7Bh/v/l1Q6QSuXSXJBsRMIYjP/QGZ8gDLDTZl9AxWST1gcA7HPKaDHlvKAwbxFzcsukSHcEWvAKKNVHUOgrKAAOjziVj7hLvnhlVThAwRHhrLWKuwqU4EVWqQQ3b5HrUKv5FmpqG0eQjY2zPoLg51s/CcYfVnwCCbDYPQAAAAAASUVORK5CYII=); }
+    .i-prayer { background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAXCAMAAADX9CSSAAAAD1BMVEUAAAC2zboAAAHh79eSmpW4ABp2AAAAAXRSTlMAQObYZgAAAFxJREFUeNqt0kEKwCAMRNGZP7n/mbuIpSIWhPbvfAFdGE2hbYQ/HAI7r5gdV2wOHaoqtmHR9mkCVHPiMUEiU+4SJGCcbua5yqOq9eXm1rkeIB26aD524Q//9bYPF6kNAXYKRKlSAAAAAElFTkSuQmCC); }
+    .i-magic { background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAXCAMAAADJPRQhAAAAElBMVEUAAAAbBpIAAAEABv56PQm0qwYDZfXfAAAAAXRSTlMAQObYZgAAAHZJREFUeNp1kUEOAzEIA+Mx/P/LldIlaQU7R48MKFkHgDUA2LORPCqQZMNUkacSaDMYlWGuyGYQ0MdRuWRoZhwH0EzB+3UqYxgrkgMWUFviyTMj4nl3kCC+ZGSEsW3uhm0yZbvMPyVY0NL6Drrg3KbLiTdcfuIPVmkCpSUi/wEAAAAASUVORK5CYII=); }
+    .i-runecraft { background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAMAAADzN3VRAAAAFVBMVEUAAAAAAAF4d3ZZWFWLNwmUko+wOQR2sZzsAAAAAXRSTlMAQObYZgAAAIFJREFUeNqN0kEKwCAMRFF/JvH+Ry6EoYpU6Oz0MbpIxh7GJUxuMCcX+CYg54SToKqlCo77gkyoiFhGVVXQEh0W9DEzCdMGQAIW0XI2LJTF31iEK8dzsphWTS2DOESGQeyAZHlJJzRJIZGZCxyQtg6G18iZSHCbz/+ZmvizO/d9ewCFeAOFN5sfDAAAAABJRU5ErkJggg==); }
+    .i-construction { background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAMAAADzN3VRAAAAPFBMVEUAAAAAAAFJLx1cSTd2VDV8b15TODBxWlSMV1VcW1gLCwtKRk14dnQfCApFOTepqJuSkYyPg3UlICNQjlZUNdwuAAAAAXRSTlMAQObYZgAAAL1JREFUeF5tz8lyAyEMRVE/DUDPdvL//5on4aRxkbvR4hQq8ZhCxDlDraqK/0ALm+kwKwWYCQmc5BmKJuETtKgGTVL4hELCOQquIqeIBBXBCK9dZNskOQVZwL5kf2DNW1sDPADZ+9Rm6/XcWcr4CcNVvQMwCkHMrS6L+8exXFW50d3MDgwEXE9jzTwaiLBbpxYdGD7o1unU6JcA3tRFI46UTt+d1JR8C2kBvrqwQUh4YKUo+Zab9d2ZMtJdwg91awdGR2OY5QAAAABJRU5ErkJggg==); }
+    .i-hitpoints { background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAUCAMAAABRYFY8AAAAD1BMVEUAAADdTwEAAAF6PQmzOQNfjd9/AAAAAXRSTlMAQObYZgAAAFlJREFUeNqt0SESwDAMxEBZ9v/fXJAjdQp7KLMCAQY8A15vraoqFbW7uxWwMnVmTgCPZwmKkXjC9ro9+939+FfBmdsBndksCTcnzOaELLzCZtDumxM27wsCPPZhAwz1YXYUAAAAAElFTkSuQmCC); }
+    .i-agility { background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAAXUlEQVR42u3VQQoAIAhE0br/oWvVcvjUMCRR4MrgQWq2YqePFR+5WweKAMCQwAEQIN3bAjTCORuyO+/kKQBg6L2JJ6g+Yk6732nRggf/L50PAIA8A/DJA7x0yu75CYAJkwHGf7YeAAAAAElFTkSuQmCC); }
+    .i-herblore { background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAARCAMAAAAfZPc8AAAADFBMVEUAAAAAvAAAAAEJbAIkm+0TAAAAAXRSTlMAQObYZgAAAF5JREFUeNpt0LENxEAMA0Htsv+eP3gfcTLMTBwo4VxR5zMmeZM6o0l0vwpqkkSFJfAIHFFHoD+AT6sq5p/eIwBaUYAKl7CFnFApbXAOVQqlSqG04ZCX7Mntbu0XrvoH5JACSLDJdnQAAAAASUVORK5CYII=); }
+    .i-thieving { background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAAS0lEQVR42mMYBaNgIADjf1IxiQZTjmlsAQLT1AJMiwi7gHJ1xEYeKRFNwBLCiYIs9aQGAVnqYQy6Rf6QTMZULV5oWpaNlu+jYOABAHbr1QExwOoiAAAAAElFTkSuQmCC); }
+    .i-crafting { background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAWBAMAAAAoU0G7AAAAD1BMVEUAAAAAAAF1e3xYOgx6PQnLwrUpAAAAAXRSTlMAQObYZgAAAG1JREFUeF5Fj9EJBDEIBbUDZ+8a2HSwXAUL9l/TxSeS9xEzjCJax4kugqXCLwR3CB6ByD+l/FqLVoKj4Cj/vpswKRKj2qQyemErm7DVwJ7WLoV8eWJE4sCIWs2IuUGi4LpD0N2rmpM5vJ8TzvcPcmoOV5e0/nwAAAAASUVORK5CYII=); }
+    .i-fletching { background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAMAAADzN3VRAAAAElBMVEUAAAAAAAEJbAI1Lxt6PQl1e3yWRDmsAAAAAXRSTlMAQObYZgAAAFtJREFUeNrN0jEOwDAIQ9F8B+5/5S7xUOSoa5mQHp7MGgMrD+IGggtoA1G2pCQGZhAnqOINvqUtBm8NBPD2ZwA6J6jmXGCwFC6AUS8cEJfKFAUXkGxA+prPR3sAd9cBJ6KIUMMAAAAASUVORK5CYII=); }
+    .i-slayer { background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAYCAMAAAAmopZHAAAAG1BMVEUAAAAAAAH////DqZmNg3m7uQN4d3ZCMSRZWFXjCMC1AAAAAXRSTlMAQObYZgAAAJNJREFUeNptzUsKAyAQBFGre/zc/8RBHTJg0hvhFWp7B/wT5nwCvXeYs0J5L6+xS/F7Zf7yWjv88SdwN8Zaiwp4jzHGWMD2ZEmHBwYoDtJlF9vBuizJXJekYK3DoPIMSCK+7s0ROoN0wrZ8CJQfpG8WYSTyJSIiHW7VDkSGHJZ4PU9DqyDfYYKW4UhAhA/vUWt5tA+SxARg2VEwWwAAAABJRU5ErkJggg==); }
+    .i-hunter { background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAXCAMAAAA4Nk+sAAAAFVBMVEUAAAAMCws/NzwxKClbQUEjDCVZWFUEo2OeAAAAAXRSTlMAQObYZgAAAHJJREFUeNqF0EEOhDAMQ9F8pzP3PzJSLZooLOpFBA8Rq403hIdzYYTHULP9wuSNj+dkNv/GEjNJoMaI8ARhwJvMgav8rnX+rxj8sesSBJjBi/hL9HNL6YdiipFa/Q7b6T3SKS+Wkwy2fi92rfTy7jvV9gBpkQGYacnI9QAAAABJRU5ErkJggg==); }
+    .i-mining { background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAXCAMAAADX9CSSAAAADFBMVEUAAAAAAAF1e3xGPC/Lr9t+AAAAAXRSTlMAQObYZgAAAGRJREFUeNp10kEKxEAMA8Hu0f//vGBMmKBNH0v4ZjYnptvOpPDsnis10WW9bpI4rEy7uC5POygg1ADvTMab4wzNOF7MDsW0y+TtRmk3Qvlwuy/GZRNpN+MXH4vXPxn/M/YXAPwA3cIBiMrALJMAAAAASUVORK5CYII=); }
+    .i-smithing { background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAMAAABFjsb+AAAAD1BMVEUAAAAAAAF1e3w1LxtVXFqn84UMAAAAAXRSTlMAQObYZgAAAGBJREFUeNptzzESgDAMA0GdpP+/mQJPQoAr140sAL3CRmJaZvDEtnQsjDVpx8qPGQk7SVu3dVqzrWNFtGEbgEgCmWZLgnTr2gzcpxYdkaR8qeZLNk/qfMKmLOVpOe1IugDCQwJSf2NlWgAAAABJRU5ErkJggg==); }
+    .i-fishing { background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAXBAMAAADjD5IeAAAAD1BMVEUAAAAAAAFVXFp1e3xGPC9FFD+mAAAAAXRSTlMAQObYZgAAAI5JREFUeF5dj8ENxSAMQ2EDTLsAZgLwBJXYf6bvND19H4JfiBylhAC4fu4+T3sbuJ9zcB5ytFJtAByArZgQpdVuSJmZkEJABeKNEiSZL60ckJaUAG26f4384dBcfAF9dHETJWlucuaeTtkj4lG7NkescQzs2VeOSAPoMNQpEX5aRm2P1/Vl5VV5CObfIakfDY0TrPK6gqgAAAAASUVORK5CYII=); }
+    .i-cooking { background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAVCAMAAACT1yXjAAAAElBMVEUAAAAAAAF6awlYOgy0qwbh79essedQAAAAAXRSTlMAQObYZgAAAFtJREFUeNp10EEKxEAIBVGrZ7z/lYO1+EiHlLsHIlgTUFd0N1MB22bopkzEaTQjVp/G3djPzjl/0xgxiRKJIanZVSQkjU0LXdRyRFomvu1oYorJsYUhcUXZ/ZUHIk4C0T3Uvo8AAAAASUVORK5CYII=); }
+    .i-firemaking { background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAXCAMAAADX9CSSAAAAElBMVEUAAAAAAAFYOgy0qwbdTwGzOQPKZnv3AAAAAXRSTlMAQObYZgAAAHtJREFUeNpty9EOAyAIQ1Eurf//y0tWlWSuD8UcoSbU/8Ajafi5CiC4V7OJJPJO9iayyDucTSRnaNwC2RnHsyl5ZZyDbG7PVTjitTL2ARGnH5en48jLacG348jQsFscB7q7UxAv4oPDz08VPdA3xM/P65xc5+r8QBX/Uh87fwNSBRw8oQAAAABJRU5ErkJggg==); }
+    .i-woodcutting { background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAWCAMAAAD6gTxzAAAAElBMVEUAAAAAAAEJbAJYOgwAvAB6PQl7bRBSAAAAAXRSTlMAQObYZgAAAGdJREFUeNpl0dEKwCAMQ9HdRv//l0fNrMUF9OHQUMRnBZynAjEy0MQ0aBJGoGSkGJd44nSJTbEOmJwRyY3k6yNpH9OyGgqvBCmnQPUoUAbJcGxOi4PlJksn1+6pLlTxt5BeszWi/8cLNqUCdjiFICMAAAAASUVORK5CYII=); }
+    .i-farming { background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAXCAMAAADJPRQhAAAAJ1BMVEUAAAAAAAF6cWaNg3l4d3aUko9ZWFVoZmNSXv9bQUE/Nzxue/9eTTYjLEHpAAAAAXRSTlMAQObYZgAAAJZJREFUeNqN0kEOwyAMBVHGJt+F9P7nrQKF0CJVnQ2LhxCWnNZopS1wzzkbG7gDEMEm9FPsQOsWoAsmnScFOmBmJHBMj1ZlQMQlRodah+QQ7YJC0rMUm68R4pJ8HO6eDZsjYcEiRsRNWsVQMCQ+hbBBX5KIKfpTmJK4xN8CkqZwC6UUSKNFrNJhF0hL6687zIAudPixOi/7RARbtdPZTAAAAABJRU5ErkJggg==); }
   </style>
 </head>
 <body>
@@ -70,6 +110,7 @@
       <p class="kicker">RuneLite plugin</p>
       <h1>Skill Bank Organizer</h1>
       <p class="lead">Opens your bank, files every stack onto a skill page, and tells you what belongs where. You rebuild the tabs by hand — the plugin never drags items.</p>
+      <div class="roster" role="img" aria-label="The 23 skills, each with its own page"><i class="i i-attack"></i><i class="i i-strength"></i><i class="i i-defence"></i><i class="i i-ranged"></i><i class="i i-prayer"></i><i class="i i-magic"></i><i class="i i-runecraft"></i><i class="i i-construction"></i><i class="i i-hitpoints"></i><i class="i i-agility"></i><i class="i i-herblore"></i><i class="i i-thieving"></i><i class="i i-crafting"></i><i class="i i-fletching"></i><i class="i i-slayer"></i><i class="i i-hunter"></i><i class="i i-mining"></i><i class="i i-smithing"></i><i class="i i-fishing"></i><i class="i i-cooking"></i><i class="i i-firemaking"></i><i class="i i-woodcutting"></i><i class="i i-farming"></i></div>
       <div class="row">
         <a class="btn" href="https://github.com/DonkeyXBT/skill-bank-organizer">View on GitHub</a>
         <a class="btn ghost" href="https://github.com/DonkeyXBT/skill-bank-organizer/tree/main/plugin/skill-bank-organizer">Plugin source</a>
@@ -109,31 +150,31 @@
     <p>There is a dedicated <strong>Raids</strong> page with CoX, ToB and ToA blocks: weapons and armour first, then supplies (overloads, brews, salts, liquid adrenaline).</p>
 
     <h2>Suggested bank tabs</h2>
+    <div class="tablewrap">
     <table>
       <thead><tr><th>Tab</th><th>Name</th><th>Skills</th></tr></thead>
       <tbody>
-        <tr><td>1</td><td>Melee</td><td>Attack, Strength, Defence</td></tr>
-        <tr><td>2</td><td>Ranged</td><td>Ranged</td></tr>
-        <tr><td>3</td><td>Magic</td><td>Magic, Runecraft</td></tr>
-        <tr><td>4</td><td>Prayer</td><td>Prayer</td></tr>
-        <tr><td>5</td><td>Potions &amp; HP</td><td>Herblore, Hitpoints</td></tr>
-        <tr><td>6</td><td>Crafting</td><td>Crafting, Fletching, Smithing, Construction</td></tr>
-        <tr><td>7</td><td>Food</td><td>Fishing, Cooking</td></tr>
-        <tr><td>8</td><td>Gathering</td><td>Mining, Woodcutting, Firemaking, Hunter, Farming</td></tr>
-        <tr><td>9</td><td>Raids &amp; utility</td><td>Raids, Agility, Thieving, Slayer, leftover</td></tr>
+        <tr><td>1</td><td>Melee</td><td><div class="chips"><span class="sk"><i class="i i-attack"></i>Attack</span><span class="sk"><i class="i i-strength"></i>Strength</span><span class="sk"><i class="i i-defence"></i>Defence</span></div></td></tr>
+        <tr><td>2</td><td>Ranged</td><td><div class="chips"><span class="sk"><i class="i i-ranged"></i>Ranged</span></div></td></tr>
+        <tr><td>3</td><td>Magic</td><td><div class="chips"><span class="sk"><i class="i i-magic"></i>Magic</span><span class="sk"><i class="i i-runecraft"></i>Runecraft</span></div></td></tr>
+        <tr><td>4</td><td>Prayer</td><td><div class="chips"><span class="sk"><i class="i i-prayer"></i>Prayer</span></div></td></tr>
+        <tr><td>5</td><td>Potions &amp; HP</td><td><div class="chips"><span class="sk"><i class="i i-herblore"></i>Herblore</span><span class="sk"><i class="i i-hitpoints"></i>Hitpoints</span></div></td></tr>
+        <tr><td>6</td><td>Crafting</td><td><div class="chips"><span class="sk"><i class="i i-crafting"></i>Crafting</span><span class="sk"><i class="i i-fletching"></i>Fletching</span><span class="sk"><i class="i i-smithing"></i>Smithing</span><span class="sk"><i class="i i-construction"></i>Construction</span></div></td></tr>
+        <tr><td>7</td><td>Food</td><td><div class="chips"><span class="sk"><i class="i i-fishing"></i>Fishing</span><span class="sk"><i class="i i-cooking"></i>Cooking</span></div></td></tr>
+        <tr><td>8</td><td>Gathering</td><td><div class="chips"><span class="sk"><i class="i i-mining"></i>Mining</span><span class="sk"><i class="i i-woodcutting"></i>Woodcutting</span><span class="sk"><i class="i i-firemaking"></i>Firemaking</span><span class="sk"><i class="i i-hunter"></i>Hunter</span><span class="sk"><i class="i i-farming"></i>Farming</span></div></td></tr>
+        <tr><td>9</td><td>Raids &amp; utility</td><td><div class="chips"><span class="sk none">Raids</span><span class="sk"><i class="i i-agility"></i>Agility</span><span class="sk"><i class="i i-thieving"></i>Thieving</span><span class="sk"><i class="i i-slayer"></i>Slayer</span><span class="sk none">Uncategorized</span></div></td></tr>
       </tbody>
     </table>
+    </div>
 
-    <h2>Install (sideload)</h2>
+    <h2>Install</h2>
     <ol class="install">
-      <li>Install IntelliJ IDEA and JDK 11+.</li>
-      <li>Clone this repo. Open the folder <code>plugin/skill-bank-organizer</code> as a Gradle project.</li>
-      <li>Run the Gradle <code>run</code> task (or <code>SkillBankOrganizerPluginTest</code>).</li>
-      <li>Log in (Jagex account if you use one).</li>
-      <li>Enable <strong>Skill Bank Organizer</strong> in the plugin list.</li>
-      <li>Open your bank. Scan fills the pages. Right-click a stack → Send to page, then drag it yourself.</li>
+      <li>In RuneLite, click the wrench to open <strong>Configuration</strong>.</li>
+      <li>Open <strong>Plugin Hub</strong> at the bottom of the plugin list.</li>
+      <li>Search for <strong>Skill Bank Organizer</strong> and click <strong>Install</strong>.</li>
+      <li>Enable it, then open your bank. Scan fills the pages.</li>
     </ol>
-    <p>This follows the official <a href="https://github.com/runelite/example-plugin">example-plugin</a> layout, so it can be submitted to the Plugin Hub later.</p>
+    <p class="note">The Plugin Hub submission is still in review, so the plugin appears in that list once it is merged.</p>
   </main>
   <footer>
     <div class="wrap">Not affiliated with Jagex. Information only — no clicking, no moving items.</div>
